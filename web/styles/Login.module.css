@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  position: absolute;
+  width: 80%;
+  height: 90%;
+  background-color: rgb(8, 2, 61);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+.leftContainer {
+  flex: 0.2;
+  height: 100%;
+  border-right: 4px solid rgb(5, 1, 36);
+}
+
+.rightContainer {
+  flex: 0.8;
+}
+
+.policeLogo {
+  width: 80%;
+  margin: 7% auto;
+}
+
+.leftText {
+  color: rgb(185, 185, 185);
+  text-align: center;
+  margin: 30% auto;
+}
