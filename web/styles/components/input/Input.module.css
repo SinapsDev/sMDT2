@@ -1,0 +1,13 @@
+.styles.inputContainer {
+  background-color: blueviolet;
+}
+
+.input {
+  outline: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 2%;
+  border-radius: 3px;
+  font-family: "Roboto", sans-serif;
+}
