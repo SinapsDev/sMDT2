@@ -57,20 +57,25 @@ exports.CREATE_USER = {
             }
             if (existingUser) {
                 return {
-                    error: 'User Already existing'
+                    error: "User Already existing",
                 };
             }
-            const registeredUser = yield Users_1.Users.insert({ username, password: hashedPassword, first_name, last_name });
+            const registeredUser = yield Users_1.Users.insert({
+                username,
+                password: hashedPassword,
+                first_name,
+                last_name,
+            });
             req.session.userid = registeredUser.generatedMaps[0].id;
-            return { type: 'success', username, first_name, last_name };
+            return { type: "success", username, first_name, last_name };
         });
-    }
+    },
 };
 exports.LOGIN_USER = {
     type: User_1.UserType,
     args: {
         username: { type: graphql_1.GraphQLString },
-        password: { type: graphql_1.GraphQLString }
+        password: { type: graphql_1.GraphQLString },
     },
     resolve(parent, args, { req }) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -78,24 +83,24 @@ exports.LOGIN_USER = {
             const user = yield Users_1.Users.findOne({ where: { username } });
             if (!user) {
                 return {
-                    error: 'Username does not exist.'
+                    error: "Username does not exist.",
                 };
             }
             else {
                 const validPass = yield bcrypt.compare(password, user.password);
                 if (validPass) {
-                    user.password = '';
+                    user.password = "";
                     req.session.userid = user.id;
                     return user;
                 }
                 else {
                     return {
-                        error: 'Wrong password.'
+                        error: "Wrong password.",
                     };
                 }
             }
         });
-    }
+    },
 };
 exports.LOGGED_USER = {
     type: User_1.UserType,
@@ -108,6 +113,6 @@ exports.LOGGED_USER = {
             }
             return null;
         });
-    }
+    },
 };
 //# sourceMappingURL=User.js.map

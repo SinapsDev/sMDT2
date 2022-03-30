@@ -12,13 +12,30 @@
 }
 
 .leftContainer {
+  display: flex;
+  flex-direction: column;
   flex: 0.2;
   height: 100%;
-  border-right: 4px solid rgb(5, 1, 36);
+  border-right: 4px solid rgb(6, 1, 41);
 }
 
 .rightContainer {
+  display: flex;
+  flex-direction: column;
   flex: 0.8;
+}
+
+.rightText {
+  margin: 4% auto;
+  font-size: 40px;
+  text-align: center;
+}
+
+.loginText {
+  margin: 4% auto;
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
 }
 
 .policeLogo {
@@ -27,7 +44,26 @@
 }
 
 .leftText {
-  color: rgb(185, 185, 185);
+  font-size: 35px;
+  font-weight: 700;
   text-align: center;
-  margin: 30% auto;
+  margin: 35% auto;
+}
+
+.bottomText {
+  margin: auto 0 3% 4%;
+  color: rgb(173, 173, 173);
+}
+
+.inputsContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 3%;
+}
+
+.loginButton {
+  width: 100%;
+  margin: 7% auto 0 auto;
 }
