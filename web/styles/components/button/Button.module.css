@@ -1,0 +1,11 @@
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 25px;
+  font-weight: 500;
+  border: 2px solid #35356a;
+}
